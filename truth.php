@@ -36,6 +36,13 @@ $x->tellTruth(0);
 $x->tellTruth(is_bool(true));
 $x->tellTruth(is_bool(false));
 $x->tellTruth(is_string('string'));
+
+print "\n";
+$x->tellTruth(is_string(''));
+print "\n";
+$x->tellTruth(!empty(''));
+print "\n";
+
 $x->tellTruth(is_int(6));
 $x->tellTruth(is_countable($countable));
 $x->tellTruth(is_null(null));
