@@ -5,16 +5,14 @@ class Truthy {
 	public function tellTruth($var): void
 	{
 
-		print json_encode($var) . "\n";
-
 		if($var){
 	
-			print "it's true\n";
+			print ((string) $var) . ": it's true\n";
 
 		}
 		else{
 
-			print "it's false\n";
+			print ((string) $var) . ": it's false\n";
 		
 		}
 
@@ -32,14 +30,18 @@ $x->tellTruth($countable);
 $x->tellTruth(null);
 $x->tellTruth(0);
 
-
+print 'is_bool(true)' . "\n";
 $x->tellTruth(is_bool(true));
+print 'is_bool(false)' . "\n";
 $x->tellTruth(is_bool(false));
+print 'is_string("string")' . "\n";
 $x->tellTruth(is_string('string'));
 
 print "\n";
+print "is_string('')\n";
 $x->tellTruth(is_string(''));
 print "\n";
+print "!empty('')\n";
 $x->tellTruth(!empty(''));
 print "\n";
 
