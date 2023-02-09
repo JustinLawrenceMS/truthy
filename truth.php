@@ -7,12 +7,12 @@ class Truthy {
 
 		if($var){
 	
-			print (is_countable($var)?json_encode($var):(string) $var) . ": it's true\n";
+			print "\n\nit's true\n\n";
 
 		}
 		else{
 
-			print (is_countable($var)?json_encode($var):(string) $var) . ": it's false\n";
+			print "\n\nit's false\n\n";
 		
 		}
 
@@ -20,46 +20,71 @@ class Truthy {
 
 }
 $x = new Truthy;
+
+print "\n\nif(true)";
 $x->tellTruth(true);
+
+print "\n\nif(false)";
 $x->tellTruth(false);
+
+print "\n\nif('string')";
 $x->tellTruth('string');
+
+print "\n\nif('')";
 $x->tellTruth('');
+
+print "\n\nif(6)";
 $x->tellTruth(6);
+
+print "\n\nif(['one', 'two'])";
 $countable = ['one', 'two'];
 $x->tellTruth($countable);
+
+print "\n\nif(null)";
 $x->tellTruth(null);
+
+print "\n\nif(0)";
 $x->tellTruth(0);
 
-print 'is_bool(true)' . "\n";
+print "\n\nif(is_bool(true))";
 $x->tellTruth(is_bool(true));
-print 'is_bool(false)' . "\n";
+
+print "\n\nif(is_bool(false))";
 $x->tellTruth(is_bool(false));
-print 'is_string("string")' . "\n";
+
+print "\n\nif(is_string('string'))";
 $x->tellTruth(is_string('string'));
 
-print "\n";
-print "is_string('')\n";
+print "\n\nif(is_string(''))";
 $x->tellTruth(is_string(''));
-print "\n";
-print "!empty('')\n";
-$x->tellTruth(!empty(''));
-print "\n";
 
+print "\n\nif(!empty(''))";
+$x->tellTruth(!empty(''));
+
+print "\n\nif(is_int(6))";
 $x->tellTruth(is_int(6));
+
+print "\n\nif(is_countable(['one', 'two']))";
 $x->tellTruth(is_countable($countable));
+
+print "\n\nif(is_null(null))";
 $x->tellTruth(is_null(null));
+
+print "\n\nif(is_bool(0))";
 $x->tellTruth(is_bool(0));
+
+print "\n\nif(is_null(0))";
 $x->tellTruth(is_null(0));
 
-print "\n";
-print "unset";
+
+print "\n\nThis is what happens with unset variables\n\n";
 
 unset($var);
 if($var){
-	print "unset var is true";
+	print "\n\nunset var is true\n\n";
 }
 else{
 
-	print "unset var is false";
+	print "\n\nunset var is false\n\n";
 
 }
