@@ -7,12 +7,12 @@ class Truthy {
 
 		if($var){
 	
-			print ((string) $var) . ": it's true\n";
+			print (is_countable($var)?json_encode($var):(string) $var) . ": it's true\n";
 
 		}
 		else{
 
-			print ((string) $var) . ": it's false\n";
+			print (is_countable($var)?json_encode($var):(string) $var) . ": it's false\n";
 		
 		}
 
