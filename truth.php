@@ -50,3 +50,16 @@ $x->tellTruth(is_countable($countable));
 $x->tellTruth(is_null(null));
 $x->tellTruth(is_bool(0));
 $x->tellTruth(is_null(0));
+
+print "\n";
+print "unset";
+
+unset($var);
+if($var){
+	print "unset var is true";
+}
+else{
+
+	print "unset var is false";
+
+}
