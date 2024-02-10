@@ -19,62 +19,62 @@ class Truthy {
 	}
 
 }
-$x = new Truthy;
+$truth = new Truthy;
 
 print "\n\nif(true)";
-$x->tellTruth(true);
+$truth->tellTruth(true);
 
 print "\n\nif(false)";
-$x->tellTruth(false);
+$truth->tellTruth(false);
 
 print "\n\nif('string')";
-$x->tellTruth('string');
+$truth->tellTruth('string');
 
 print "\n\nif('')";
-$x->tellTruth('');
+$truth->tellTruth('');
 
 print "\n\nif(6)";
-$x->tellTruth(6);
+$truth->tellTruth(6);
 
 print "\n\nif(['one', 'two'])";
 $countable = ['one', 'two'];
-$x->tellTruth($countable);
+$truth->tellTruth($countable);
 
 print "\n\nif(null)";
-$x->tellTruth(null);
+$truth->tellTruth(null);
 
 print "\n\nif(0)";
-$x->tellTruth(0);
+$truth->tellTruth(0);
 
 print "\n\nif(is_bool(true))";
-$x->tellTruth(is_bool(true));
+$truth->tellTruth(is_bool(true));
 
 print "\n\nif(is_bool(false))";
-$x->tellTruth(is_bool(false));
+$truth->tellTruth(is_bool(false));
 
 print "\n\nif(is_string('string'))";
-$x->tellTruth(is_string('string'));
+$truth->tellTruth(is_string('string'));
 
 print "\n\nif(is_string(''))";
-$x->tellTruth(is_string(''));
+$truth->tellTruth(is_string(''));
 
 print "\n\nif(!empty(''))";
-$x->tellTruth(!empty(''));
+$truth->tellTruth(!empty(''));
 
 print "\n\nif(is_int(6))";
-$x->tellTruth(is_int(6));
+$truth->tellTruth(is_int(6));
 
 print "\n\nif(is_countable(['one', 'two']))";
-$x->tellTruth(is_countable($countable));
+$truth->tellTruth(is_countable($countable));
 
 print "\n\nif(is_null(null))";
-$x->tellTruth(is_null(null));
+$truth->tellTruth(is_null(null));
 
 print "\n\nif(is_bool(0))";
-$x->tellTruth(is_bool(0));
+$truth->tellTruth(is_bool(0));
 
 print "\n\nif(is_null(0))";
-$x->tellTruth(is_null(0));
+$truth->tellTruth(is_null(0));
 
 
 print "\n\nThis is what happens with unset variables\n\n";
