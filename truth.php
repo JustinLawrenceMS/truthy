@@ -5,12 +5,11 @@ class Truthy {
 	public function tellTruth($var): void
 	{
 
-		if($var){
+		if ($var) {
 	
 			print "\n\nit's true\n\n";
 
-		}
-		else{
+		} else {
 
 			print "\n\nit's false\n\n";
 		
