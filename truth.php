@@ -1,22 +1,15 @@
 <?php
 
-class Truthy {
-
+class Truthy 
+{
 	public function tellTruth($var): void
 	{
-
 		if ($var) {
-	
 			print "\n\nit's true\n\n";
-
 		} else {
-
 			print "\n\nit's false\n\n";
-		
 		}
-
 	}
-
 }
 $truth = new Truthy;
 
@@ -79,11 +72,8 @@ $truth->tellTruth(is_null(0));
 print "\n\nThis is what happens with unset variables\n\n";
 
 unset($var);
-if($var){
+if ($var) {
 	print "\n\nunset var is true\n\n";
-}
-else{
-
+} else {
 	print "\n\nunset var is false\n\n";
-
 }
